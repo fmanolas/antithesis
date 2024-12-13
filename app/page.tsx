@@ -1,7 +1,19 @@
+"use client";
 import "./globals.css"; // Import global styles if needed
 import styles from "./page.module.css"; // Adjust to match your structure if needed
 
 export default function Home() {
+  const copyToClipboard = () => {
+    const textToCopy = "ca"; // The content to be copied
+    navigator.clipboard
+      .writeText(textToCopy)
+      .then(() => {
+        alert("Text copied to clipboard!");
+      })
+      .catch((err) => {
+        console.error("Failed to copy text: ", err);
+      });
+  };
   return (
     <div className={styles.container}>
       <div className={styles.headlineContainer}>
@@ -27,8 +39,10 @@ export default function Home() {
           </p>
         </div>
         {/* Call-to-Action Button */}
-        <div className={styles.ctaRow}>
-          <p>ca</p>
+        <div>
+          <p onClick={copyToClipboard} style={{ cursor: "pointer" }}>
+            GBnR5sWaxve1LQnQCwSHi9EEx62WVr4HkVJJxpYLpump
+          </p>
         </div>
         {/* Social Icons */}
         <div className={styles.socialRow}>

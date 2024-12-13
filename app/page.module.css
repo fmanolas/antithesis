@@ -14,7 +14,7 @@
   /* Headline container for proper placement */
   .headlineContainer {
     position: absolute;
-    top: 10%; /* Adjust spacing from the top */
+    top: 5%; /* Adjust spacing from the top */
     width: 100%;
     text-align: center;
     z-index: 1; /* Ensure it's above the GIF */
