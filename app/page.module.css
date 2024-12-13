@@ -1,0 +1,86 @@
+/* The container takes up the entire viewport */
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: black; /* Fallback background color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; 
+ }
+  
+  /* Headline container for proper placement */
+  .headlineContainer {
+    position: absolute;
+    top: 10%; /* Adjust spacing from the top */
+    width: 100%;
+    text-align: center;
+    z-index: 1; /* Ensure it's above the GIF */
+  }
+  
+  /* Custom font headline */
+  .headline {
+    font-family: "NoScaryFonts", sans-serif;
+    font-size: 8rem;
+    color: white;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  
+  /* Center the GIF and control its size */
+  .centeredGif {
+    max-width: 50%; /* Adjust the size of the GIF */
+    max-height: 50%; /* Ensure it doesn't overflow */
+    object-fit: contain; /* Preserve aspect ratio */
+    z-index: 0; /* Place behind text */
+    margin: 1rem 0;
+  }
+  
+  /* Center the content text */
+  .content {
+    position: absolute;
+    bottom:-20%; /* Position the content below the GIF */
+    text-align: center;
+    color: white;
+  }
+  
+  /* Styling for the title */
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .description {
+    font-family: "Poppins", sans-serif; /* Or your preferred font */
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6; /* Better readability */
+    max-width: 800px; /* Restrict width for a compact look */
+    margin: 0 auto; /* Center the paragraph */
+    padding: 1rem 0; /* Add vertical spacing */
+  }
+
+  .socialRow {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .icon {
+    width: 24px; /* Adjust as needed */
+    height: 24px; /* Adjust as needed */
+  }
+
+  @font-face {
+    font-family: "NoScaryFonts";
+    src: url("/fonts/NoScary-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
